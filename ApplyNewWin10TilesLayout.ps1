@@ -1,5 +1,5 @@
 # Copy The Customized XML File to the correct Destination
-Copy-Item -Path LayoutExport.xml -Destination %localappdata%\Microsoft\Windows\Shell\LayoutModification.xml -Force
+Copy-Item -Path .\LayoutExport.xml -Destination $env:LOCALAPPDATA\Microsoft\Windows\Shell\LayoutModification.xml -Force
 
 # Delete Every Registry Key in the Cache including "tiles"
 Get-ChildItem "HKCU:Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\Cache\DefaultAccount"|
